@@ -1,16 +1,18 @@
 #
 # ~/.bashrc
-# screenfetch 
+ screenfetch 
 # feh --randomize --bg-fill Pictures/*
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
-source /home/sam/sources/ronin.sh
-source /home/sam/sources/Ronin.sh
-source /home/sam/sources/sshg.sh
+#source /home/sam/sources/ronin.sh
+#source /home/sam/sources/Ronin.sh
+#source /home/sam/sources/sshg.sh
 # source sources/ranger.sh
+alias u='apt-get update'
+alias a='apt-get install'
 alias p='pacman -S'
 alias s='sudo -s'
 alias r='ranger'
