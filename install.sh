@@ -4,4 +4,4 @@ apt-get update  # To get the latest package lists
 apt-get install vim -y
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp /home/install/vimrc /etc/vim/vimrc
-cp /home/install/.bashrc .bashrc
+cp /home/install/bashrc .bashrc
