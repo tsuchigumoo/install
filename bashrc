@@ -1,7 +1,7 @@
 #
 # ~/.bashrc
- screenfetch 
-# feh --randomize --bg-fill Pictures/*
+screenfetch 
+feh --randomize --bg-fill pix/*
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
