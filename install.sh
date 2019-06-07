@@ -11,4 +11,4 @@ cp /home/install/vimrc /etc/vim/vimrc
 cp /home/install/bashrc .bashrc
 cd
 mkdir pix
-cp /home/install/pix/* pix/
+cp /home/install/*.jpg pix/
