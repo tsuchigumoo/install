@@ -137,6 +137,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'tpope/vim-commentary'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
