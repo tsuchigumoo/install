@@ -15,3 +15,5 @@ apt-get install i3status
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp /home/install/vimrc /etc/vim/vimrc
 cp /home/install/bashrc .bashrc
+cp /home/install/Green.profile .local/share/konsole/Green.profile
+cp /home/install/i3 .config/i3/config
