@@ -193,4 +193,4 @@ set number
 
 "YCM"
 " nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-let g:ycm_key_list_stop_completion = ['<Space>']
+"let g:ycm_key_list_stop_completion = ['<Space>']
