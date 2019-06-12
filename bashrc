@@ -25,7 +25,7 @@ echo $((value-min)) > /sys/class/backlight/intel_backlight/brightness;echo $valu
 alias b='value=$(</sys/class/backlight/intel_backlight/brightness);min=1000;
 echo $((value+min)) > /sys/class/backlight/intel_backlight/brightness;echo $value' 
 
-wmctrl -r ':ACTIVE:' -b toggle,fullscreen
+#wmctrl -r ':ACTIVE:' -b toggle,fullscreen
 
 set -o vi
 
