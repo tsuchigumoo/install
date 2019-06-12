@@ -18,6 +18,7 @@ alias s='sudo -s'
 alias r='ranger'
 alias ss='scrot -d 5 -c'
 alias c='clear'
+alias yt='python3 -m youtube_dl'
 alias d='value=$(</sys/class/backlight/intel_backlight/brightness);min=1000;
 echo $((value-min)) > /sys/class/backlight/intel_backlight/brightness;echo $value' 
 
