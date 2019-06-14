@@ -34,7 +34,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole --hide-tabbar --hide-menubar
+bindsym $mod+Return exec rxvt
 # kill focused window
 bindsym $mod+q kill
 
