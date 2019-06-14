@@ -1,0 +1,10 @@
+rxvt.transparent: true
+URxvt.transparent: true
+URxvt.shading:15
+rxvt.scrollBar: false
+rxvt.scrollBar_right: false
+rxvt.scrollBar_floating: false
+rxvt.scrollstyle: rxvt
+
+rxvt.font:     xft: DejaVu Sans Mono:size=8:antialias=true
+rxvt.boldFont: xft:DejaVu Sans Mono:bold:size=8:antialias=true
