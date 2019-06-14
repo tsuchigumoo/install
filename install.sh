@@ -15,21 +15,37 @@ apt-get install python3 -y
 apt-get install dmenu -y
 apt-get install i3 -y
 apt-get install i3status -y
-apt-get install pass
-apt-get install isync
-
+apt-get install pass -y
+apt-get install isync -y
+apt-get install xbindkeys -y
 pip3 install pywal
 pip3 install --user pywal
 pip3 install youtube-dl
+
+
+##XBINDKEYS##
+
+xbindkeys -d > ~/.xbindkeysrc
+cp /home/install/xbindkeysrc ~/.xbindkeysrc
+
+##VUNDLE##
+
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp /home/install/vimrc /etc/vim/vimrc
 cp /home/install/bashrc .bashrc
-cp /home/install/Green.profile .local/share/konsole/Green.profile
+
+
 cp /home/install/i3 .config/i3/config
+
+## zoom urxvt ##
+
 cp /home/install/xresources .Xresources
 mkdir ~/.Xresources/ext
+
 git clone https://github.com/majutsushi/urxvt-font-size  ~/.Xresources/ext
 cp ~/.Xresources/ext/urxvt-font-size ~/.Xresources/ext
+
+##Mutt wizard##
 git clone https://github.com/LukeSmithxyz/mutt-wizard
 cd mutt-wizard
 sudo make install
