@@ -16,6 +16,7 @@ apt-get install dmenu -y
 apt-get install i3 -y
 apt-get install i3status -y
 
+
 pip3 install pywal
 pip3 install --user pywal
 pip3 install youtube-dl
@@ -25,3 +26,6 @@ cp /home/install/bashrc .bashrc
 cp /home/install/Green.profile .local/share/konsole/Green.profile
 cp /home/install/i3 .config/i3/config
 cp /home/install/xresources .Xresources
+mkdir ~/.Xresources/ext
+git clone https://github.com/majutsushi/urxvt-font-size  ~/.Xresources/ext
+cp ~/.Xresources/ext/urxvt-font-size ~/.Xresources/ext
