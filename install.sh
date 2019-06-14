@@ -17,16 +17,13 @@ apt-get install i3 -y
 apt-get install i3status -y
 apt-get install pass -y
 apt-get install isync -y
-apt-get install xbindkeys -y
+
 pip3 install pywal
 pip3 install --user pywal
 pip3 install youtube-dl
 
 
-##XBINDKEYS##
 
-xbindkeys -d > ~/.xbindkeysrc
-cp /home/install/xbindkeysrc ~/.xbindkeysrc
 
 ##VUNDLE##
 
