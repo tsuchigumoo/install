@@ -1,3 +1,5 @@
+setxkbmap -option caps:escape
+
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 wal -i /home/install/ >/dev/null
