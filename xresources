@@ -8,3 +8,9 @@ rxvt.scrollstyle: rxvt
 
 rxvt.font:     xft: DejaVu Sans Mono:size=8:antialias=true
 rxvt.boldFont: xft:DejaVu Sans Mono:bold:size=8:antialias=true
+
+
+
+URxvt.perl-ext-common:  ...,font-size
+URxvt.keysym.C-equal:     font-size:increase
+URxvt.keysym.C-hyphen-minus:     font-size:increase
