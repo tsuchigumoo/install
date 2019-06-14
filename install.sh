@@ -15,7 +15,8 @@ apt-get install python3 -y
 apt-get install dmenu -y
 apt-get install i3 -y
 apt-get install i3status -y
-
+apt-get install pass
+apt-get install isync
 
 pip3 install pywal
 pip3 install --user pywal
@@ -29,3 +30,7 @@ cp /home/install/xresources .Xresources
 mkdir ~/.Xresources/ext
 git clone https://github.com/majutsushi/urxvt-font-size  ~/.Xresources/ext
 cp ~/.Xresources/ext/urxvt-font-size ~/.Xresources/ext
+git clone https://github.com/LukeSmithxyz/mutt-wizard
+cd mutt-wizard
+sudo make install
+mw add
