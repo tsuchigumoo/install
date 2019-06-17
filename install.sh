@@ -19,6 +19,8 @@ apt-get install pass -y
 apt-get install isync -y
 apt-get install python3-pip
 
+
+pip3 install setup-tools
 pip3 install pywal
 pip3 install --user pywal
 pip3 install youtube-dl
