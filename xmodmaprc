@@ -1,0 +1,5 @@
+clear Mod4
+remove mod4 = Super_L Super_R
+keycode 133 = Super_L Super_R
+keycode 133 = Home NoSymbol Home
+
