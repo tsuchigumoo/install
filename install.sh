@@ -33,7 +33,7 @@ cp /home/install/bashrc .bashrc
 
 
 cp /home/install/i3 .config/i3/config
-
+cp /home/install/xmodmaprc .xmodmaprc
 ## zoom urxvt ##
 
 cp /home/install/xresources .Xresources
