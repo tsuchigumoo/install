@@ -30,7 +30,7 @@ git clone https://github.com/jaagr/polybar.git
 cd polybar && ./build.sh
 
 
-
+chmod 777 /home/install/info-pingrtt.sh
 
 
 
@@ -68,3 +68,4 @@ git clone https://github.com/LukeSmithxyz/mutt-wizard
 cd mutt-wizard
 sudo make install
 mw add
+
