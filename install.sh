@@ -31,7 +31,7 @@ cd polybar && ./build.sh
 
 
 chmod 777 /home/install/info-pingrtt.sh
-
+chmod 777 /home/install/info-ssh-sessions.sh
 
 
 pip3 install setup-tools
