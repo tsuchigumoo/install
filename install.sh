@@ -15,7 +15,7 @@ apt-get install python3 -y
 apt-get install zathura -y
 apt-get install dmenu -y
 apt-get install i3 -y
-apt-get install i3status -y
+
 apt-get install pass -y
 apt-get install isync -y
 apt-get install python3-pip
