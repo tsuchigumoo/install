@@ -255,9 +255,9 @@ mode "resize" {
 exec compton
 # # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+ #       status_command i3status
+#}
 #
 exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
