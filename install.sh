@@ -3,6 +3,9 @@ cd
 apt-get update  # To get the latest package lists
 apt-get install compton
 apt-get install vim -y
+
+apt-get install vim-gtk -y
+
 apt-get install ranger -y
 apt-get install scrot -y
 apt-get install screenfetch -y
