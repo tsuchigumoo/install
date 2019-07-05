@@ -38,6 +38,7 @@ pip3 install setup-tools
 pip3 install pywal
 pip3 install --user pywal
 pip3 install youtube-dl
+pip3 install neovim
 
 ###i3 over everything else
 update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/bin/i3 60
