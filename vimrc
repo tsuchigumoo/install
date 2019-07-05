@@ -129,7 +129,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 call vundle#begin()
 " ...
-
+Plugin 'tweekmonster/spellrotate.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'Glench/Vim-Jinja2-Syntax'
@@ -189,6 +189,13 @@ set number
 :command Q q
 :command WQ wq
 
+
+
+
+nmap <silent> zz <Plug>(SpellRotateForward)
+nmap <silent> zb <Plug>(SpellRotateBackward)
+vmap <silent> zz <Plug>(SpellRotateForwardV)
+vmap <silent> zb <Plug>(SpellRotateBackwardV)
 
 
 
