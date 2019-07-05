@@ -1,3 +1,4 @@
+clear
 setxkbmap -option caps:escape
 
 export PATH="${PATH}:${HOME}/.local/bin/"
