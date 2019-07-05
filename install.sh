@@ -18,6 +18,8 @@ apt-get install python3 -y
 
 
 apt-get install libxcb-composite0-dev -y
+apt-get install build-essential cmake python3-dev -y
+
 
 apt-get install zathura -y
 apt-get install dmenu -y
