@@ -64,7 +64,7 @@ cd
 cp /home/install/i3 .config/i3/config
 cp /home/install/xmodmaprc .xmodmaprc
 ## zoom urxvt ##
-cp /home/install/polyconfig .config/polybarconfig
+cp /home/install/polyconfig .config/polybar/config
 cp /home/install/xresources .Xresources
 mkdir .Xresources/ext
 
