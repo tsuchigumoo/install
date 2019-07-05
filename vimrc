@@ -190,6 +190,10 @@ set number
 :command WQ wq
 
 
+nnoremap <Tab> ]s
+
+nnoremap   <S-Tab> [s
+
 
 
 nmap <silent> zz <Plug>(SpellRotateForward)
