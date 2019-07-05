@@ -15,6 +15,10 @@ apt-get install rxvt-unicode -y
 apt-getinstall  autocutsel -y
 apt-get install python3 -y
 
+
+
+apt-get install libxcb-composite0-dev -y
+
 apt-get install zathura -y
 apt-get install dmenu -y
 apt-get install i3 -y
