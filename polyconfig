@@ -22,7 +22,7 @@ font-1 = MaterialIcons:size=10;0
 font-2 = Termsynu:size=8:antialias=false;-2
 font-3 = FontAwesome:size=10;0
 
-modules-left = powermenu mpd
+modules-left = mpd
 modules-right = volume backlight wireless-network github info-ssh-sessions info-pingrtt wired-network battery filesystem date
 
 
@@ -90,7 +90,7 @@ font-4 = MaterialIcons:size=10;-1
 font-5 = Termsynu:size=8:antialias=false;0
 
 modules-center = i3
-modules-right = cpu memory
+modules-right = temperature cpu memory
 
 [bar/external]
 enable-ipc = true
@@ -238,12 +238,12 @@ type = internal/i3
 format = <label-state> <label-mode>
 pin-workspaces = true
 
-ws-icon-0 = term;
-ws-icon-1 = web;
-ws-icon-2 = code;
-ws-icon-3 = music;
-ws-icon-4 = irssi;
-ws-icon-default = 
+ws-icon-0 = term;
+ws-icon-1 = web;
+ws-icon-2 = code;
+ws-icon-3 = music;
+ws-icon-4 = irssi;
+ws-icon-default = 
 
 label-dimmed-underline = ${root.background}
 
@@ -409,14 +409,16 @@ ping-interval = 10
 
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
-label-disconnected =    not connected
+label-disconnected =    not connected
 label-disconnected-foreground = #66
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 
 animation-packetloss-0 = 
 animation-packetloss-0-foreground = #ffa64c
@@ -426,7 +428,7 @@ animation-packetloss-framerate = 500
 
 [module/wired-network]
 type = internal/network
-interface = ens33
+interface = wlan0
 interval = 2.0
 
 label-connected =   %local_ip%
@@ -484,7 +486,7 @@ bar-progress-empty-foreground = #44
 
 [module/date]
 type = internal/date
-date =    %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
+date =   %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
 date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
 
 
@@ -499,19 +501,19 @@ format-volume = <ramp-volume> <label-volume>
 label-volume = volume %percentage%%
 label-volume-foreground = #ff
 
-format-muted-prefix = " "
+format-muted-prefix = ""
 format-muted-foreground = #66
 label-muted = sound muted
 label-muted-foreground = #99ffffff
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
 ramp-volume-foreground = #9f78e1
 
-ramp-headphones-0 = 
-ramp-headphones-1 = 
+ramp-headphones-0 = 
+ramp-headphones-1 = 
 ramp-headphones-foreground = #9f78e1
 
 [module/battery]
@@ -530,39 +532,27 @@ type = internal/xwindow
 label-maxlen = 75
 label-foreground = #ffffff
 
-[module/powermenu]
-type = custom/menu
 
-format-padding = 3
-format-background = #000
-format-foreground = #111
+[module/temperature]
+type = internal/temperature
 
-label-open = 
-label-close = 
-label-separator = " - "
+; Seconds to sleep between updates
+; Default: 1
+interval = 0.5
 
-menu-0-0 = Terminate WM
-menu-0-0-foreground = ${colors.accent}
-menu-0-0-exec = bspc quit -1
-menu-0-1 = Reboot
-menu-0-1-foreground = ${colors.accent}
-menu-0-1-exec = menu-open-1
-menu-0-2 = Power off
-menu-0-2-foreground = ${colors.accent}
-menu-0-2-exec = menu-open-2
+; Thermal zone to use
+; To list all the zone types, run 
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+; Default: 0
+thermal-zone = 0
 
-menu-1-0 = Cancel
-menu-1-0-foreground = ${colors.accent}
-menu-1-0-exec = menu-open-0
-menu-1-1 = Reboot
-menu-1-1-foreground = ${colors.accent}
-menu-1-1-exec = sudo reboot
+; Full path of temperature sysfs path
+; Use `sensors` to find preferred temperature source, then run
+; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
+; to find path to desired file
+; Default reverts to thermal zone setting
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 
-menu-2-0 = Power off
-menu-2-0-foreground = ${colors.accent}
-menu-2-0-exec = sudo poweroff
-menu-2-1 = Cancel
-menu-2-1-foreground = ${colors.accent}
-menu-2-1-exec = menu-open-0
-
-; vim:ft=dosini
+; Threshold temperature to display warning label (in degrees celsius)
+; Default: 80
+warn-temperature = 60
