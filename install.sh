@@ -79,3 +79,7 @@ cd mutt-wizard
 sudo make install
 mw add
 
+cd
+cd .vim/bundle/YouCompleteMe/
+
+python3 install.py --clang-completer
