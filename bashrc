@@ -21,6 +21,7 @@ alias s='sudo -s'
 alias r='ranger'
 alias x=' xclip -selection clipboard'
 alias rs='systemctl restart'
+alias sp='systemctl stop'
 alias ss='scrot -d 5 -c'
 alias c='clear'
 alias d='value=$(</sys/class/backlight/intel_backlight/brightness);min=1000;
