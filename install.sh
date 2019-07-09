@@ -82,4 +82,7 @@ mw add
 cd
 cd .vim/bundle/YouCompleteMe/
 
+cp /home/install/manpdf manpdf
+
+
 python3 install.py --clang-completer
