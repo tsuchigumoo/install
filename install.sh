@@ -55,6 +55,9 @@ update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/
 ##NODEJS##
 curl -sL https://deb.nodesource.com/setup_8.x | bash -
 apt-get install -y nodejs
+
+##LIVEDOWN##
+npm install -g livedown
 ##VUNDLE##
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
