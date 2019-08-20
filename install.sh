@@ -52,7 +52,9 @@ pip3 install neovim
 ###i3 over everything else
 update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/bin/i3 60
 
-
+##NODEJS##
+curl -sL https://deb.nodesource.com/setup_8.x | bash -
+apt-get install -y nodejs
 ##VUNDLE##
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
