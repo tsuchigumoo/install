@@ -14,6 +14,7 @@ apt-get install xsel -y
 apt-get install rxvt-unicode -y
 apt-getinstall  autocutsel -y
 apt-get install python3 -y
+apt-get install neomutt-y
 
 
 
