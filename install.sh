@@ -64,6 +64,8 @@ npm install -g livedown
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp /home/install/vimrc /etc/vim/vimrc
 cp /home/install/bashrc .bashrc
+cp /home/install/muttrc .config/mutt/
+cp /home/install/color.muttrc .config/mutt/
 
 cd 
 cd .config
