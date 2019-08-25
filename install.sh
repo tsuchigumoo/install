@@ -28,7 +28,9 @@ apt-get install i3 -y
 
 apt-get install pass -y
 apt-get install isync -y
-apt-get install python3-pip
+apt-get install python3-pip -y
+
+
 
 
 
