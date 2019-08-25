@@ -20,12 +20,13 @@ alias p='pacman -S'
 alias s='sudo -s'
 alias r='ranger'
 alias x=' xclip -selection clipboard'
-alias rs='systemctl restart'
-alias sp='systemctl stop'
+
 alias ss='scrot -d 5 -c'
 alias c='clear'
 alias d='value=$(</sys/class/backlight/intel_backlight/brightness);min=1000;
 echo $((value-min)) > /sys/class/backlight/intel_backlight/brightness;echo $value' 
+alias rs='systemctl restart'
+alias sp='systemctl stop'
 
 alias b='value=$(</sys/class/backlight/intel_backlight/brightness);min=1000;
 echo $((value+min)) > /sys/class/backlight/intel_backlight/brightness;echo $value' 
@@ -37,6 +38,7 @@ set -o vi
 export EDITOR=vim
 
 alias v='vim'
+alias nm='neomutt'
 
 ##########COLORS#######
 #enable color support of ls and also add handy aliases
@@ -167,7 +169,6 @@ if ! shopt -oq posix; then
         . /etc/bash_completion
     fi
 fi
-
 
 
 
