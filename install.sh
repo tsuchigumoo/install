@@ -16,7 +16,7 @@ apt-getinstall  autocutsel -y
 apt-get install python3 -y
 apt-get install neomutt -y
 apt-get install msmtp -y
-
+apt-get install abook -y
 
 apt-get install libxcb-composite0-dev -y
 apt-get install build-essential cmake python3-dev -y
