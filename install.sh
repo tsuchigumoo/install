@@ -69,6 +69,13 @@ cp /home/install/bashrc .bashrc
 cp /home/install/muttrc .config/mutt/
 cp /home/install/color.muttrc .config/mutt/
 
+
+##YOUCOMPLETEME##
+cd 
+cd .vim/bundle/YouCompleteMe
+python3 install.py --all
+
+
 cd 
 cd .config
 mkdir i3
