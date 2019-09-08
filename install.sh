@@ -106,8 +106,7 @@ cp /home/install/bar bar.sh
 python3 install.py --clang-completer
 
 
-## add github
-
+# GITHUB
 cd 
 cd .ssh
 ssh-keygen -t rsa -C "sam.vrillaud@gmail.com"
