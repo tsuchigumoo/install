@@ -104,3 +104,10 @@ cp /home/install/manpdf manpdf
 cp /home/install/bar bar.sh
 
 python3 install.py --clang-completer
+
+
+##github
+cd 
+cd .ssh
+ssh-keygen -t rsa -C "sam.vrillaud@gmail.com"
+
