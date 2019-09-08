@@ -14,9 +14,8 @@ apt-get install xsel -y
 apt-get install rxvt-unicode -y
 apt-getinstall  autocutsel -y
 apt-get install python3 -y
-apt-get install neomutt -y
-apt-get install msmtp -y
-apt-get install abook -y
+
+
 
 apt-get install libxcb-composite0-dev -y
 apt-get install build-essential cmake python3-dev -y
@@ -28,9 +27,7 @@ apt-get install i3 -y
 
 apt-get install pass -y
 apt-get install isync -y
-apt-get install python3-pip -y
-
-
+apt-get install python3-pip
 
 
 
@@ -55,26 +52,12 @@ pip3 install neovim
 ###i3 over everything else
 update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/bin/i3 60
 
-##NODEJS##
-curl -sL https://deb.nodesource.com/setup_8.x | bash -
-apt-get install -y nodejs
 
-##LIVEDOWN##
-npm install -g livedown
 ##VUNDLE##
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp /home/install/vimrc /etc/vim/vimrc
 cp /home/install/bashrc .bashrc
-cp /home/install/muttrc .config/mutt/
-cp /home/install/color.muttrc .config/mutt/
-
-
-##YOUCOMPLETEME##
-cd 
-cd .vim/bundle/YouCompleteMe
-python3 install.py --all
-
 
 cd 
 cd .config
@@ -104,10 +87,3 @@ cp /home/install/manpdf manpdf
 cp /home/install/bar bar.sh
 
 python3 install.py --clang-completer
-
-
-##github
-cd 
-cd .ssh
-ssh-keygen -t rsa -C "sam.vrillaud@gmail.com"
-
