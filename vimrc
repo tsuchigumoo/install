@@ -146,6 +146,9 @@ Plugin  'davidhalter/jedi-vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax' 
+Plugin 'shime/vim-livedown'
 " ...
 call vundle#end()
 
@@ -201,8 +204,13 @@ nmap <silent> zb <Plug>(SpellRotateBackward)
 vmap <silent> zz <Plug>(SpellRotateForwardV)
 vmap <silent> zb <Plug>(SpellRotateBackwardV)
 
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+let g:ycm_key_list_stop_completion = ['<Space>']
 
 
-"YCM"
-" nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-"let g:ycm_key_list_stop_completion = ['<Space>']
+let g:pandoc#modules#disabled = [ "spell" ]
+
+let g:livedown_autorun = 0
+let g:livedown_open = 1
+nmap md :LivedownToggle<CR>
+
