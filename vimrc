@@ -113,7 +113,6 @@ set expandtab
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 
 
@@ -129,7 +128,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 call vundle#begin()
 " ...
-Plugin 'tweekmonster/spellrotate.vim'
+
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'Glench/Vim-Jinja2-Syntax'
@@ -146,9 +145,9 @@ Plugin  'davidhalter/jedi-vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax' 
-Plugin 'shime/vim-livedown'
+Plugin 'tikhomirov/vim-glsl'
+Plugin 'thinca/vim-quickrun'
+
 " ...
 call vundle#end()
 
@@ -193,24 +192,32 @@ set number
 :command WQ wq
 
 
-nnoremap <Tab> ]s
-
-nnoremap   <S-Tab> [s
 
 
-
-nmap <silent> zz <Plug>(SpellRotateForward)
-nmap <silent> zb <Plug>(SpellRotateBackward)
-vmap <silent> zz <Plug>(SpellRotateForwardV)
-vmap <silent> zb <Plug>(SpellRotateBackwardV)
-
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+"YCM"
+ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 let g:ycm_key_list_stop_completion = ['<Space>']
 
 
-let g:pandoc#modules#disabled = [ "spell" ]
 
-let g:livedown_autorun = 0
-let g:livedown_open = 1
-nmap md :LivedownToggle<CR>
 
+
+
+ nnoremap <F1> :!clear ; git status ; git log --oneline<CR>
+
+
+ nnoremap <F2> :!clear;git pull origin master; git diff %<CR>
+
+ nnoremap <F3> :!clear;git add %<CR>
+
+
+ nnoremap <F4> :!clear; read -p "Enter Your Commit name: "  commitname;git commit -m "$commitname" %<CR>
+
+ nnoremap <F5> :!git push -f origin master<CR>
+
+
+ nnoremap <F6> :QuickRun<CR>
+
+
+"glsl autocompletion
+autocmd! BufNewFile,BufRead *.vs,*.fs set ft=glsl
