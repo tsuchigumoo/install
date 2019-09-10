@@ -111,3 +111,23 @@ cd
 cd .ssh
 ssh-keygen -t rsa -C "sam.vrillaud@gmail.com"
 
+
+
+
+
+
+
+# Rofi
+apt-get install rofi -y
+
+wget https://github.com/erebe/greenclip/releases/download/3.2/greenclip
+
+cp greenclip /usr/local/bin
+
+cd
+
+cp mytheme .config/rofi/mytheme.rasi
+cp mytheme2 .config/rofi/mytheme.rasi2
+
+
+#gdrive
