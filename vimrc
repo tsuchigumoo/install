@@ -147,7 +147,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'thinca/vim-quickrun'
-
+Plugin 'vim-latex/vim-latex'
 " ...
 call vundle#end()
 
