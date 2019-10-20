@@ -18,6 +18,7 @@ apt-get install neomutt -y
 apt-get install msmtp -y
 apt-get install abook -y
 
+apt-get install libudev-dev -y
 apt-get install libxcb-composite0-dev -y
 apt-get install build-essential cmake python3-dev -y
 
@@ -131,3 +132,10 @@ cp mytheme2 .config/rofi/mytheme.rasi2
 
 
 #gdrive
+
+
+
+git clone https://github.com/ckb-next/ckb-next.git
+cd ckb-next
+./quickinstall
+
