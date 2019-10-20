@@ -39,7 +39,11 @@ bindsym $mod+Return exec rxvt
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show  drun -theme "~/.config/rofi/mytheme.rasi"
+bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme "~/.config/rofi/mytheme2.rasi"
+execgreenclip daemon &
+
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -134,17 +138,20 @@ bindsym $mod+0 workspace $ws10
 for_window [class="^.*"] border pixel 5
 ## Manual management of external displays
 # Set the shortcuts and what they do
-set $mode_display Ext Screen (v) SET POSITION,(b) HDMI, (h) HDMI 4k, (x) HDMI 2k, (y) HDMI OFF
+set $mode_display Ext Screen (v) screen off,(b) HDMI, (h) HDMI 4k, (x) HDMI 2k, (y) HDMI OFF, (r) ROTATE 
 mode "$mode_display" {
      #xrandr --output HDMI-1 --mode 1920x1080
 
 
-    bindsym v exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --pos 96x2460 --rotate normal, mode "default"
+    bindsym v exec --no-startup-id xrandr --output eDP-1 --off
 
-    bindsym b exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal,mode "default"
-    bindsym h exec --no-startup-id xrandr --output HDMI-1 --mode 3840x2160 --pos 0x0 --rotate normal,mode "default"
-    bindsym x exec --no-startup-id xrandr --output HDMI-1 --mode 2560x1440 --pos 0x0 --rotate normal,mode "default"
+
+    bindsym b exec --no-startup-id xrandr --output DP-1 --mode 1920x1080 --pos 0x0 --rotate normal,mode "default"
+    bindsym h exec --no-startup-id xrandr --output HDMI-1 --mode 3840x2160 --pos 2500x0 --rotate normal,mode "default"
+    bindsym x exec --no-startup-id xrandr --output HDMI-1 --mode 2560x1440 --pos 2500x0 --rotate normal,mode "default"
     bindsym y exec --no-startup-id xrandr --output HDMI-1 --auto --off, mode "default"
+    
+    bindsym r exec --no-startup-id xrandr --output HDMI-1 --rotate left
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -152,6 +159,50 @@ mode "$mode_display" {
 }
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+x mode "$mode_display"
+
+
+#########################################################################
+set $mode_color Ext Screen (r) red,(b) blue, (g) green, (w) white, (0) black
+
+mode "$mode_color" {
+
+
+
+    bindsym b exec --no-startup-id echo rgb 0000ff > /dev/input/ckb1/cmd
+ 
+    bindsym r exec --no-startup-id echo rgb ff0000 > /dev/input/ckb1/cmd
+    bindsym g exec --no-startup-id echo rgb 00ff00 > /dev/input/ckb1/cmd
+
+    bindsym 0 exec --no-startup-id echo rgb 000000 > /dev/input/ckb1/cmd
+    bindsym o exec --no-startup-id echo rgb ffa500 > /dev/input/ckb1/cmd
+
+    bindsym c exec --no-startup-id echo rgb 00ffff > /dev/input/ckb1/cmd
+
+    bindsym j exec --no-startup-id echo rgb 00a86b > /dev/input/ckb1/cmd
+    bindsym v exec --no-startup-id echo rgb ee82ee > /dev/input/ckb1/cmd
+    bindsym b exec --no-startup-id echo rgb 0000ff > /dev/input/ckb1/cmd
+    bindsym b exec --no-startup-id echo rgb 0000ff > /dev/input/ckb1/cmd
+    bindsym b exec --no-startup-id echo rgb 0000ff > /dev/input/ckb1/cmd
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+# Declare here the shortcut to bring the display selection menu
+bindsym $mod+z mode "$mode_color"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #test color
 # class                 border  backgr. text    indicator child_border                                                                     
@@ -260,4 +311,5 @@ exec compton
 #}
 #
 exec --no-startup-id wmctrl -c Plasma
+exec --no-startup-id bar &
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
